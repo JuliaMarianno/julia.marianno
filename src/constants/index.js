@@ -1,20 +1,29 @@
+
 import {
-  mobile,
+  certificadoReact,
+  certificadoReactn,
+  certificadoGit,
   backend,
-  creator,
+  unip,
+  alura,
+  sql,
+  certificadobootstrap,
+  certificadojavascriptt,
+  certificadotypescript,
+  generalMotors,
+  etec,
   web,
-  javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
+  php,
   tailwind,
   nodejs,
-  mongodb,
   git,
   figma,
-  docker,
+  bootstrap,
+  mysql,
+  python,
   meta,
   starbucks,
   tesla,
@@ -23,41 +32,30 @@ import {
   jobit,
   tripguide,
   threejs,
+  javascript, 
+  typescript,
+  certificadoNext,
+  certificadoNode,
 } from "../assets";
+
+
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "Sobre Mim",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Jornada",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contato",
   },
 ];
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
+
 
 const technologies = [
   {
@@ -81,8 +79,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "PHP",
+    icon: php,
   },
   {
     name: "Tailwind CSS",
@@ -93,12 +91,12 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "MySQL",
+    icon: mysql,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
     name: "git",
@@ -107,159 +105,143 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  }
 ];
 
-const experiences = [
+const journeys = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+      title: "Ingressando como dev  ",
+    company_name: "Etec (Escola Técnica Estadual)",
+    icon: etec,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Fev 2021 - Dez 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Lógica de Programação",
+      " Desenvolvimento de Aplicações Mobile, Sistemas Embarcados",
+      "HTML5, CSS3, JavaScript, Python, SQL/MySQL, C#",
+      "Análise de Stakeholders, Análise SWOT, Engenharia de Requisitos. ",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Estudos Complementares",
+    company_name: "Alura",
+    icon: alura,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Mar 2021 - Presente",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Formaões nos cursos:",
+      "React, Vite, Typescript",
+      "Tailwind, Git",
+      "Boas práticas em HTML5 e CSS3",
+      " Java, Python, SQL, .NET e C#."
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Faculdade de Ciência da Computação",
+    company_name: "UNIP",
+    icon: unip,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jan 2025 - Jan 2029",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Atualmente desenvolvendo materias como:",
+      "Programação Web Responsiva",
+      "Desenvolvimento para Dispositivos Móveis",
+      "Engenharia de Requisitos",
+      "Interface Humano-Computador",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Desenvolvimento de Soft Skills",
+    company_name: "General Motors",
+    icon: generalMotors,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Out 2024 - Presente",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Atuando na área de Recursos Humanos na General Motors, desenvolvi competências essenciais como:",
+      "Comunicação Clara e Assertiva",
+      "Trabalho em Equipe Multidisciplinar",
+      "Gestão de Processos e Organização.",
     ],
   },
 ];
 
-const testimonials = [
+const objetivos = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    titulo: "Crescimento Profissional",
+    descricao:
+      "Aprimorar constantemente minhas habilidades técnicas em desenvolvimento web, buscando especialização em tecnologias modernas de Front-End e, futuramente, atuar também como Full Stack.",
+    icone: "🚀",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    titulo: "Contribuição em Equipe",
+    descricao:
+      "Participar de projetos colaborativos, agregando valor com minhas soft skills desenvolvidas no RH e aprendendo com profissionais experientes da área de tecnologia.",
+    icone: "🤝",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
-const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    titulo: "Impacto Positivo",
+    descricao:
+      "Utilizar a tecnologia para criar soluções que facilitem a vida das pessoas, promovendo acessibilidade, inclusão e inovação.",
+    icone: "🌎",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    titulo: "Aprendizado Contínuo",
+    descricao:
+      "Manter o compromisso com o aprendizado contínuo, acompanhando tendências do mercado e buscando certificações relevantes.",
+    icone: "📚",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+
+const certifications = [
+  {
+    name: "Certificação React",
+    institution: "Alura",
+    date: "Agosto 2023",
+    image: certificadoReactn, // Substitua pelo caminho correto da imagem
+  },
+  {
+    name: "Certificação Next.js",
+    institution: "Alura",
+    date: "Outubro 2023",
+    image: certificadoNext, // Substitua pelo caminho correto da imagem
+  },
+  {
+    name: "Certificação Node.js",
+    institution: "Alura",
+    date: "Julho 2023",
+    image: certificadoNode, // Substitua pelo caminho correto da imagem
+  },
+   {
+    name: "Certificação SQL",
+    institution: "Alura",
+    date: "Outubro 2021",
+    image: sql,
+  },
+  {
+    name: "Certificação Git",
+    institution: "Alura",
+    date: "Junho 2020",
+    image: certificadoGit,
+  },
+  {
+    name: "Certificação Typescript",
+    institution: "Alura",
+    date: "Fevereiro 2022",
+    image: certificadotypescript,
+  },
+  {
+    name: "Certificação Javascript",
+    institution: "Alura",
+    date: "Junho 2024",
+    image: certificadojavascriptt,
+  },
+  {
+    name: "Certificação Bootstrap",
+    institution: "Alura",
+    date: "Março 2022",
+    image: certificadobootstrap,
+  },
+];
+
+export { technologies, journeys, certifications, objetivos };
