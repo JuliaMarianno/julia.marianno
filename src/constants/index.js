@@ -1,4 +1,11 @@
+import {
+    html,
+  css,
+  reactjs,
+  php,
+   javascript, 
 
+} from "../assets";
 import {
   certificadoReact,
   certificadoReactn,
@@ -13,10 +20,6 @@ import {
   generalMotors,
   etec,
   web,
-  html,
-  css,
-  reactjs,
-  php,
   tailwind,
   nodejs,
   git,
@@ -32,7 +35,7 @@ import {
   jobit,
   tripguide,
   threejs,
-  javascript, 
+ 
   typescript,
   certificadoNext,
   certificadoNode,
