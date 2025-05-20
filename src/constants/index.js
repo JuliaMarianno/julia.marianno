@@ -1,9 +1,5 @@
 import {
-    html,
-  css,
-  reactjs,
-  php,
-   javascript, 
+
 
 } from "../assets";
 import {
@@ -12,6 +8,11 @@ import {
   certificadoGit,
   backend,
   unip,
+  html,
+  css,
+  reactjs,
+  php,
+   javascript, 
   alura,
   sql,
   certificadobootstrap,
