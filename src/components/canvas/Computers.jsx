@@ -3,10 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  // Carrega o modelo leve no mobile e o original no desktop
-  const computer = useGLTF(isMobile ? "/desktop_pc/scene_mobile.glb" : "/desktop_pc/scene.gltf");
-
+// Componente 3D
+const Computers = () => {
+  const computer = useGLTF("/desktop_pc/scene.gltf");
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
@@ -21,8 +20,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={0.75}
+        position={[0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -31,9 +30,9 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
-    // Detecta se a largura da tela é de mobile
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
 
@@ -48,6 +47,18 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  if (isMobile || loadError) {
+    return (
+      <div style={{ width: "100%", textAlign: "center", display: "flex", justifyContent: "center" }}>
+        <img
+          src="desktop_pc/computer_mobile.png"
+          alt="Modelo 3D Mobile"
+          style={{ maxWidth: "80%", height: "auto", marginTop: "378px" }}
+        />
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop='demand'
@@ -55,18 +66,44 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => {
+        // Captura erro de contexto WebGL perdido
+        gl.getContext().oncontextlost = () => setLoadError(true);
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
+        <ErrorBoundary onError={() => setLoadError(true)}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Computers />
+        </ErrorBoundary>
       </Suspense>
       <Preload all />
     </Canvas>
   );
 };
+
+// ErrorBoundary para capturar erros em componentes filhos
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    if (this.props.onError) this.props.onError(error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return null;
+    }
+    return this.props.children;
+  }
+}
 
 export default ComputersCanvas;
